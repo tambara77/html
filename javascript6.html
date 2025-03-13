@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variaveis do JavaScript</title>
+</head>
+<body>
+    
+  <script>
+    let nome = "tambara" //variável com escopo global
+    var idade = 18; //variável com escopo global - forma antiga
+    const pi = 3.14159265359; //constante com escopo global
+
+    function exibir(){
+     let nome = "Maria"; //variável com escopo local
+    alert("nome"+ nome);
+
+
+   }
+     if(3>2){
+      let nome = "Chubaca"; //variável com escopo local
+      alert("nome"+ nome);
+
+
+   }
+    console.log("nome"+ nome);
+
+  </script>
+
+   <h1>Variável do tipo vetor ou array</h1>
+
+  <script>
+   const frutas = ["maçã", "banana", "laranja", "uva", "melancia"]
+
+   console.log(frutas);
+   console.log(typeof frutas);
+   console.log(frutas{0});
+   console.log(frutas{1});
+   console.log(frutas{5});
+   frutas[5] = "manga";
+   console.log(frutas);
+
+   frutas[1] = abacaxi;
+   console.log(frutas);
+
+   console.log(frutas.length);
+ 
+   for(let i = 0; i < frutas.length; i++){
+    document.getElementyById("lista").innerHTML +="<li>" +frutas[i] + "<li>";
+
+   }
+
+
+
+  </script>
+
+
+
+
+</body>
+</html>

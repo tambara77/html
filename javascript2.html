@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script</title>
+
+ <style>
+
+ .oculto{
+
+   display: none;
+
+ }
+
+
+ </style>
+
+
+</head>
+<body>
+    
+ <h1>Manipular visibilidade</h1>
+ <button id="btn1" onclick="mostrar()">Mostrar</button>
+ <button id="btn2" style="display: none;" onclick="ocultar()">ocultar</button>
+ <p id="msg" style="display: none;">Olá Mundo</p>
+
+ <script>
+
+ function mostrar(){
+  document.getElementById('msg').style.display = 'block';
+  document.getElementById('btn1').style.display = 'none';
+  document.getElementById('btn2').style.display = 'block';
+
+ }
+
+ function ocultar(){
+  document.getElementById('msg').style.display = 'none';
+  document.getElementById('btn1').style.display = 'block';
+  document.getElementById('btn2').style.display = 'none';
+
+ }
+
+ </script>
+ 
+ <h2>Alternado Classe</h2>
+ <button onclick="mostrar2()" id="btn3">Mostrar</button>
+ <p class="oculto" id="msg2">Olá Mundo</p>
+
+ <script>
+ 
+  function mostrar2(){ 
+
+  let mensagem = document.getElementById('msg2');
+  let botao = document.getElementById('btn3');
+
+   mensagem.classList.toggle('oculto');
+   botao.innerText = mensagem.classList.contains('oculto') ?
+   'Mostrar' : 'Ocultar';
+
+  }
+
+ </script>
+
+
+  <h1>Outras formas de aparecer mensagens via JavaScript</h1>
+ 
+  <button onclick="Alert('Olá Mundo!')">Alerta</button>
+
+ <h2>Via console</h2>
+
+ <button onclick=" console.log('Olá Mundo!')">Console</button>
+
+ <h2>Via documento</h2>
+
+ <button onclick="document.write('Olá Mundo')">Documento</button>
+
+ <script>
+
+ <h1>Variáveis</h1>
+
+ /* Comentário em JavaScript */
+ // Comentário em JavaScript
+
+ let variavel; // Declara variável
+ variável = 10; // Atribui valor a variável
+ 
+ let variável2 = "senac"; // Declara e atribui valor a variável 
+
+ console.log(variavel); // Exibe valor da variável no console
+ conosle.log(variável); // Exibe valor da variável no console
+ 
+ console.log(variavel2);
+ conosle.log(typeof variável2);
+ 
+ 
+ let variável3 = true
+ console.log(variave3);
+ conosle.log(typeof variável3);
+ 
+ 
+ 
+ let variável4 = document.getElementById('msg');
+ console.log(variavel4);
+ conosle.log(typeof variável4);
+ 
+
+ let variável = 20;
+ console.log(variável);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ </script>
+
+
+
+
+
+
+</body>
+</html>

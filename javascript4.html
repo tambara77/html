@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estruturas Lógicas do JavaScript</title>
+</head>
+<body>
+    <h1>Desvio Condicional</h1>
+    <form>
+        <input type="text" id="nome" placeholder="Digite seu nome">
+        <input type="text" id="hora" placeholder="Digite a hora">
+        <input type="button" value="Verificar" onclick="verificarHora()">
+    </form>
+    <p id="mensagem"></p>
+    
+    <script>
+        function verificarHora() {
+            let nome = document.getElementById('nome').value;
+            let hora = document.getElementById('hora').value;
+
+            if (hora < 0 || hora > 23){
+                document.getElementById('mensagem').innerText = 'Hora inválida!';
+            } else if (hora < 12){
+                document.getElementById('mensagem').innerText = `Bom dia, ${nome} !`;
+            } else if(hora < 18){
+                    document.getElementById('mensagem').innerText = `Boa tarde, ${nome} !`;
+            } else {
+                    document.getElementById('mensagem').innerText = `Boa noite, ${nome} !`;
+            }
+        }
+    </script>
+
+    <h1>Estruturas de repetição</h1>
+    <h2>Laço for</h2>
+    <form>
+        <input type="number" id="numero" placeholder="Digite um número">
+        <input type="button" onclick="gerar()" value="Gerar sequência">
+    </form>
+
+    <ul id="sequencia"></ul>
+
+        <script>
+            function gerar(){
+                let limite = document.getElementById('numero').value;
+                let lista = "";
+                for (let i = 1; i <= limite; i++){
+                    lista = lista + "<li>" + i + "</li>";                  
+                }
+                document.getElementById('sequencia').innerHTML = lista;
+            }  
+        </script>
+</body>
+</html>
